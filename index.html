@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VehicleReg Pro - Modern Vehicle Registration</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>Loading VehicleReg Pro</h2>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-brand">
+                <i class="fas fa-car"></i>
+                <span>VehicleReg Pro</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#register" class="nav-link">Register</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="animated-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">Modern Vehicle</span>
+                <span class="title-line">Registration System</span>
+            </h1>
+            <p class="hero-subtitle">Fast, secure, and hassle-free vehicle registration with cutting-edge technology</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToSection('register')">
+                    <i class="fas fa-rocket"></i>
+                    Start Registration
+                </button>
+                <button class="btn btn-secondary">
+                    <i class="fas fa-play"></i>
+                    Watch Demo
+                </button>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <div class="stat-number" data-target="50000">0</div>
+                <div class="stat-label">Vehicles Registered</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="99">0</div>
+                <div class="stat-label">Success Rate %</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="24">0</div>
+                <div class="stat-label">Hours Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Type Selector -->
+    <section class="vehicle-types">
+        <div class="container">
+            <h2 class="section-title">Choose Your Vehicle Type</h2>
+            <div class="vehicle-grid">
+                <div class="vehicle-card" data-type="car">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Personal Car</h3>
+                    <p>Register your personal vehicle quickly and easily</p>
+                </div>
+                <div class="vehicle-card" data-type="motorcycle">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3>Motorcycle</h3>
+                    <p>Two-wheeler registration with specialized documentation</p>
+                </div>
+                <div class="vehicle-card" data-type="truck">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Commercial Truck</h3>
+                    <p>Heavy vehicle registration for commercial use</p>
+                </div>
+                <div class="vehicle-card" data-type="bus">
+                    <div class="vehicle-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>Bus/Van</h3>
+                    <p>Public transport and large vehicle registration</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section id="register" class="registration-section">
+        <div class="container">
+            <div class="form-header">
+                <h2 class="section-title">Vehicle Registration Form</h2>
+                <div class="progress-indicator">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Personal Info</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Vehicle Details</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Documents</div>
+                    </div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Review</div>
+                    </div>
+                </div>
+            </div>
+
+            <form id="registration-form" class="registration-form">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" data-step="1">
+                    <h3>Personal Information</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <div class="input-icon"><i class="fas fa-user"></i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <div class="input-icon"><i class="fas fa-user"></i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <div class="input-icon"><i class="fas fa-envelope"></i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <div class="input-icon"><i class="fas fa-phone"></i></div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="address">Address</label>
+                            <textarea id="address" name="address" rows="3" required></textarea>
+                            <div class="input-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Vehicle Details -->
+                <div class="form-step" data-step="2">
+                    <h3>Vehicle Details</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="make">Vehicle Make</label>
+                            <select id="make" name="make" required>
+                                <option value="">Select Make</option>
+                                <option value="toyota">Toyota</option>
+                                <option value="honda">Honda</option>
+                                <option value="ford">Ford</option>
+                                <option value="bmw">BMW</option>
+                                <option value="mercedes">Mercedes-Benz</option>
+                            </select>
+                            <div class="input-icon"><i class="fas fa-car"></i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="model">Model</label>
+                            <input type="text" id="model" name="model" required>
+                            <div class="input-icon"><i class="fas fa-cog"></i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="year">Year</label>
+                            <input type="number" id="year" name="year" min="1900" max="2024" required>
+                            <div class="input-icon"><i class="fas fa-calendar"></i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="color">Color</label>
+                            <input type="text" id="color" name="color" required>
+                            <div class="input-icon"><i class="fas fa-palette"></i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="vin">VIN Number</label>
+                            <input type="text" id="vin" name="vin" required>
+                            <div class="input-icon"><i class="fas fa-barcode"></i></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="engine">Engine Size</label>
+                            <input type="text" id="engine" name="engine" required>
+                            <div class="input-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Document Upload -->
+                <div class="form-step" data-step="3">
+                    <h3>Required Documents</h3>
+                    <div class="document-upload-section">
+                        <div class="upload-item">
+                            <div class="upload-box" data-upload="license">
+                                <i class="fas fa-id-card"></i>
+                                <h4>Driver's License</h4>
+                                <p>Upload a clear photo of your driver's license</p>
+                                <input type="file" id="license" accept="image/*,.pdf">
+                                <div class="upload-status"></div>
+                            </div>
+                        </div>
+                        <div class="upload-item">
+                            <div class="upload-box" data-upload="insurance">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Insurance Certificate</h4>
+                                <p>Current insurance documentation</p>
+                                <input type="file" id="insurance" accept="image/*,.pdf">
+                                <div class="upload-status"></div>
+                            </div>
+                        </div>
+                        <div class="upload-item">
+                            <div class="upload-box" data-upload="title">
+                                <i class="fas fa-file-alt"></i>
+                                <h4>Vehicle Title</h4>
+                                <p>Proof of vehicle ownership</p>
+                                <input type="file" id="title" accept="image/*,.pdf">
+                                <div class="upload-status"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Review -->
+                <div class="form-step" data-step="4">
+                    <h3>Review Your Information</h3>
+                    <div class="review-section">
+                        <div class="review-card">
+                            <h4>Personal Information</h4>
+                            <div id="review-personal"></div>
+                        </div>
+                        <div class="review-card">
+                            <h4>Vehicle Details</h4>
+                            <div id="review-vehicle"></div>
+                        </div>
+                        <div class="review-card">
+                            <h4>Documents</h4>
+                            <div id="review-documents"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-navigation">
+                    <button type="button" class="btn btn-secondary" id="prev-btn" style="display: none;">
+                        <i class="fas fa-arrow-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary" id="next-btn">
+                        Next
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button type="submit" class="btn btn-success" id="submit-btn" style="display: none;">
+                        <i class="fas fa-check"></i>
+                        Submit Registration
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Fast Processing</h3>
+                    <p>Complete your registration in under 30 minutes with our streamlined process</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Platform</h3>
+                    <p>Bank-level security ensures your personal information is always protected</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our expert team is available around the clock to assist you</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>support@vehicleregpro.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>123 Registration Ave, City, State 12345</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <i class="fas fa-car"></i>
+                        <span>VehicleReg Pro</span>
+                    </div>
+                    <p>Modern vehicle registration made simple and secure.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#register">Register</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Vehicle Registration</a></li>
+                        <li><a href="#">License Renewal</a></li>
+                        <li><a href="#">Title Transfer</a></li>
+                        <li><a href="#">Insurance Verification</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Live Chat</a></li>
+                        <li><a href="#">Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 VehicleReg Pro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Registration Successful!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Your vehicle registration has been submitted successfully. You will receive a confirmation email shortly.</p>
+                <div class="registration-number">
+                    <strong>Registration ID: <span id="reg-id"></span></strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="closeModal()">
+                    <i class="fas fa-home"></i>
+                    Back to Home
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
